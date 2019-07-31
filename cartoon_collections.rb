@@ -7,15 +7,28 @@ def roll_call_dwarves(dwarves)
 end
 
 def summon_captain_planet(planeteer_calls)
-  planeteer_calls.collect { |x| x.capitalize }
-  
+  new_planeteer_calls = Array.new
+  planeteer_calls.collect { |x| new_planeteer_calls << "#{x.capitalize}!" }
+  # binding.pry
+  new_planeteer_calls
 end
 
-def long_planeteer_calls# code an argument here
-  # Your code here
+def long_planeteer_calls(calls_long)
+  # nums = Array.new  
+  # calls_long.each { |i|
+  #   nums << i.size
+  #   }
+  # if 
+  calls_long.any? { |word| word.length > 4 } #=> true
 end
 
-def find_the_cheese# code an argument here
-  # the array below is here to help
+def find_the_cheese(food)
   cheese_types = ["cheddar", "gouda", "camembert"]
+  match = nil
+  cheese_types.each { |cheese| 
+  if(food.include?(cheese))
+    return cheese
+  end
+  }
+ return match
 end
